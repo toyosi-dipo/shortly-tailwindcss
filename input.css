@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#cta {
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ficon:hover {
+  filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
+    brightness(89%) contrast(85%);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  @apply relative cursor-pointer w-6 h-6 duration-[250ms];
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  @apply absolute w-6 h-0.5 top-0 left-0 bg-[#9c9aa6] duration-500;
+}
+
+.hamburger-middle {
+  @apply translate-y-[7px];
+}
+
+.hamburger-bottom {
+  @apply translate-y-[14px];
+}
+
+.open .hamburger-top {
+  @apply rotate-45 translate-y-[6px]  translate-x-[6px];
+}
+
+.open .hamburger-bottom {
+  @apply -rotate-45 translate-y-[6px]  translate-x-[6px];
+}
+
+.open .hamburger-middle {
+  @apply hidden;
+}
+
+@tailwind utilities;
